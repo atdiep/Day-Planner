@@ -1,22 +1,21 @@
 $(document).ready(function () {
 
-    var now = moment().format("dddd, MMMM Do, YYYY, h:mm:ss A");
+    var now = moment();
     $('#currentDay').append(now);
 
-    function saveRow() {
-        var eventInput = $("textarea");
-        var eventEL = localStorage.getItem("textarea");
         $(".saveBtn").on("click", function (event) {
+            console.log(event.target.previousElementSibling.firstElementChild.value);
+            var eventEl = event.target.previousElementSibling.firstElementChild.value;
             event.preventDefault();
 
-            var eventEL = $("textarea").val();
-            localStorage.setItem("textarea", eventEL);
-            return saveRow
+            var key = event.target.previousElementSibling.firstElementChild.id
+            console.log(event.target.previousElementSibling.firstElementChild.id);
+            localStorage.setItem(key, eventEl);
         });
-    };
+
 
     function updateRowStyle() {
-        var currHour = now.getHours();
+        var currHour = Hours();
         // Assign each row a time slot.
         if (currHour = currHour) {
             document.body.textarea.style.backgroundColor = "white";
