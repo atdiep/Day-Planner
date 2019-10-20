@@ -6,7 +6,6 @@ $(document).ready(function () {
     $(".saveBtn").on("click", function (event) {
 
         var eventEl = event.target.previousElementSibling.firstElementChild.value;
-        event.preventDefault();
 
         var key = event.target.previousElementSibling.firstElementChild.id
 

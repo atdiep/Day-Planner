@@ -16,10 +16,14 @@ body {
   
   .jumbotron {
     text-align: center;
-    background-color: transparent;
+    background-color: #ff5500;
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
+    background-image: url(./images/background.jpg);
+    background-size: 780px 450px;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
   }
   
   #currentDay {
@@ -69,6 +73,8 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
     color: white;
+    text-align: center;
+    padding-top: 30px !important;
   }
   
   .saveBtn i:hover {
